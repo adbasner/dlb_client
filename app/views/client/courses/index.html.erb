@@ -1,0 +1,7 @@
+<h2>Here are all the Courses</h2>
+<hr>
+<% @courses.each do |course| %>
+  <p>Course ID: <%= course['id'] %></p>
+  <p>Course Name: <%= course['name'] %></p>
+  <hr>
+<% end %>

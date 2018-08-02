@@ -1,0 +1,11 @@
+<h2>Here are all the notebook_sections in your notebook</h2>
+<hr>
+<% @notebook_sections.each do |notebook_section| %>
+  <p>NBS ID: <%= notebook_section['id'] %></p>
+  <p>NBS Lab ID: <%= notebook_section['lab_id'] %></p>
+  <p>NBS Lab <%= notebook_section['lab'] %></p>
+  <p>NBS Priority <%= notebook_section['priority'] %></p>
+  <p>NBS Data <%= notebook_section['data'] %></p>
+  <p>NBS Can edit <%= notebook_section['student_can_edit'] %></p>
+  <hr>
+<% end %>

@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    WELCOME TO THE DIGITAL LAB NOTEBOOK OF THE FUTURE
+    <h1>WELCOME TO THE DIGITAL LAB NOTEBOOK OF THE FUTURE</h1>
+    <% flash.each do |key, message| %>
+      <p><%= message %><p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

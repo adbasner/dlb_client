@@ -1,0 +1,8 @@
+<h2>Here are all the Labs in the course</h2>
+<hr>
+<% @labs.each do |lab| %>
+  <p>Lab ID: <%= lab['id'] %></p>
+  <p>Lab Title: <%= lab['title'] %></p>
+  <p>Are you done with it? <%= lab['completed'] %></p>
+  <hr>
+<% end %>

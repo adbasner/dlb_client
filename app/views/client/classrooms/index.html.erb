@@ -1,0 +1,15 @@
+<h2>Here are all pairings of teacher/student/classroom</h2>
+<hr>
+<% @classrooms.each do |classroom| %>
+  <p>Classroom ID: <%= classroom['id'] %></p>
+  <p>Teacher ID: <%= classroom['teacher_id'] %></p>
+  <p>Student ID: <%= classroom['student_id'] %></p>
+  <p>Teacher First Name: <%= classroom['teacher_first_name'] %></p>
+  <p>Teacher Last Name: <%= classroom['teacher_last_name'] %></p>
+  <p>Teacher Email: <%= classroom['teacher_email'] %></p>
+  <p>Student First Name: <%= classroom['student_first_name'] %></p>
+  <p>Student Last Name: <%= classroom['student_last_name'] %></p>
+  <p>Student Email: <%= classroom['student_email'] %></p>
+  <p>Course: <%= classroom['course'] %></p>
+  <hr>
+<% end %>

@@ -14,6 +14,10 @@
     <% flash.each do |key, message| %>
       <p><%= message %><p>
     <% end %>
+    <h2>Teachers</h2>
+    <a href="/client/teachers/signup">Teacher Sign Up</a>
+    <h2>Students</h2>
+    <a href="/client/students/signup">Student Sign Up</a>
     <%= yield %>
   </body>
 </html>

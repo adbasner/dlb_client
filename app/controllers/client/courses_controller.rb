@@ -6,6 +6,10 @@ class Client::CoursesController < ApplicationController
   end
 
   def show
+    course_id = params[:id]
+    response = Unirest.get("http://localhost:3000/api/courses/#{course_id}")
+    @course = response.body
+    render 'show.html.erb'
   end
 
   def new

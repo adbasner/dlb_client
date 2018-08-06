@@ -11,13 +11,31 @@
 
   <body>
     <h1>WELCOME TO THE DIGITAL LAB NOTEBOOK OF THE FUTURE</h1>
+    <a href="/">HOME</a>
     <% flash.each do |key, message| %>
       <p><%= message %><p>
     <% end %>
+    <% if @jwt %>
+      <p class="flash-hash flash-jwt"><%= @jwt %></p>
+    <% end %>
     <h2>Teachers</h2>
     <a href="/client/teachers/signup">Teacher Sign Up</a>
+    <a href="/client/teacher_login">Teacher Log In</a>
+    <a href="/client/teacher_logout" data-method="delete">Teacher Log Out</a>
+
+
     <h2>Students</h2>
     <a href="/client/students/signup">Student Sign Up</a>
+       <a href="/client/student_login">Student Log In</a>
+    <a href="/client/student_logout" data-method="delete">Student Log Out</a>
+
+
+    <h2>My Courses</h2>
+    <a href="/client/courses">Courses</a>
+
+
+
+
     <%= yield %>
   </body>
 </html>

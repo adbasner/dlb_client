@@ -56,5 +56,17 @@ Rails.application.routes.draw do
     # -------------------------------------------
     get '/teachers/signup' => 'teachers#new'
     post '/teachers' => 'teachers#create'
+
+    # Student Sessions
+    # -------------------------------------------
+    get '/student_login' => 'student_sessions#new'
+    post '/student_login' => 'student_sessions#create'
+    delete '/student_logout' => 'student_sessions#destroy'
+
+    # Teacher Sessions
+    # -------------------------------------------
+    get '/teacher_login' => 'teacher_sessions#new'
+    post '/teacher_login' => 'teacher_sessions#create'
+    delete '/teacher_logout' => 'teacher_sessions#destroy'
   end
 end

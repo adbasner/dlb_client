@@ -1,9 +1,23 @@
 <h2>Here are all the Courses</h2>
+
 <hr>
 
   <% @courses.each do |course| %>
     <p>Course ID: <%= course['id'] %></p>
     <p>Course Name: <%= course['name'] %></p>
-
+    <a href="/client/courses/<%= course['id'] %>">View the course</a>
     <hr>
   <% end %>
+<hr>
+<% if @not_enrolled != [] %>
+  <h2>Not enrolled</h2>
+  <% @not_enrolled.each do |course| %>
+    <p>Course ID: <%= course['id'] %></p>
+    <p>Course Name: <%= course['name'] %></p>
+    <a href="/client/courses/<%= course['id'] %>">View the course</a>
+    <hr>
+  <% end %>
+  <hr>
+<% end %>
+<h2>Add a new course</h2>
+<a href="/client/courses/new"><button>Add course</button></a>

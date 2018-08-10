@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   namespace :client do
     # Classrooms
     # -------------------------------------------
-    get '/classrooms/' => 'classrooms#index'
-    get '/classrooms/new' => 'classrooms#new'
-    get '/classrooms/:id' => 'classrooms#show'
-    post '/classrooms/' => 'classrooms#create'
-    get '/classrooms/:id/edit' => 'classrooms#edit'
-    patch '/classrooms/:id' => 'classrooms#update'
-    # get '/classrooms/:id/delete' => 'classrooms#delete'
-    delete '/classrooms/:id' => 'classrooms#destroy'
+    # get '/classrooms/' => 'classrooms#index'
+    # get '/classrooms/new' => 'classrooms#new'
+    # get '/classrooms/:id' => 'classrooms#show'
+    # post '/classrooms/' => 'classrooms#create'
+    # get '/classrooms/:id/edit' => 'classrooms#edit'
+    # patch '/classrooms/:id' => 'classrooms#update'
+    # # get '/classrooms/:id/delete' => 'classrooms#delete'
+    # delete '/classrooms/:id' => 'classrooms#destroy'
 
     # Courses
     # -------------------------------------------

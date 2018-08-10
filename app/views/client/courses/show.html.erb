@@ -1,3 +1,12 @@
-<p><%= @course['id'] %></p>
-<p><%= @course['name'] %></p>
-<p><%= @course['teacher_full_name'] %></p>
+<p>ID: <%= @course['id'] %></p>
+<p>Course Name: <%= @course['name'] %></p>
+<p>Course Description: <%= @course['description'] %></p>
+<p>Teacher Name: <%= @course['teacher_full_name'] %></p>
+<p>Teacher Email: <%= @course['teacher_email'] %></p>
+<% @course['labs'].each do |lab| %>
+  <p>Lab <%= lab['id'] %>: <%= lab['title'] %></p>
+<% end %>
+
+<div>
+  <a href="/client/courses/<%= @course['id'] %>/edit"><button>Edit</button></a>
+</div>

@@ -1,6 +1,7 @@
 class Client::CoursesController < ApplicationController
   def index
     response = Unirest.get('http://localhost:3000/api/courses')
+    puts "---------------"
     @courses = response.body['courses_attending']
     # change variable names
     @not_enrolled = response.body['courses_not_attending']
